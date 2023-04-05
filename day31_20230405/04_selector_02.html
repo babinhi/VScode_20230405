@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 선택자 색상 바꾸기</title>
+    <style>
+        /* if1에 적용된 요소 스타일 지정*/
+        /* 배경색은 orange 글자색은 white */
+    #id1{
+        background-color: aliceblue;
+        /*color: white;*/
+        /*color: rgb(255, 255, 255); max값: 255 (0~255)*/
+        color: rgb(95, 70, 255);
+        /* color: #ffffff; ← ff/ff/ff 16진수*/
+        /*color: #ff0000; ← 빨강*/
+        /*color: #00ff00; ← 초록*/
+        /*color: #0000ff; ← 파랑*/
+        
+
+    }
+    #id2{
+        background-color: blanchedalmond;
+        color: saddlebrown;
+    }
+    .class1{
+        color: indianred;
+    }
+    .class2{
+        background-color: floralwhite;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id ="id1">  <!-- id는 unique 해야함-->
+        
+        div 태그 입니다
+    </div>
+    <p id ="id2">
+        p 태그 입니다
+    </p>
+    <div id ="id3" class = "class1 class2">
+        두번째 div 태그 입니다
+    </div>
+    <h2 id ="id4" class = "class2 class1">
+        h2 태그 입니다
+    </h2>
+    <!-- id가 부여된 태그가 class가 부여된 태그보다 우선순위를 가짐-->
+    <div class = "class1 class2">
+        안녕하세요
+    </div>
+</body>
+</html>
