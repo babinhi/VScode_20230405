@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: darkolivegreen;
+        }
+        /* hover : 가상선택자
+                  (해당 태그에 마우스가 올라갔을때 hover에서 지정한 효과가 적용이 된다*/
+        a:hover{
+            color: white;
+            background-color: darkgray;
+        }
+        div:hover{
+            background-color: tan;
+            color: ghostwhite;
+        }
+        div p{
+            display: none;
+            /*dispaly: none 보여주지 않겠다 */
+        }
+        div:hover p{ /*div에 마우스를 올리면 해당 자손에 적용 */
+            display: block; /* dispaly를 해제? 하는 것*/
+        }
+        
+    </style>
+</head>
+<body>
+
+    <a href = "#">링크부분</a>
+    <div>
+        div입니다
+        <p>안녕하세요</p>
+    </div>
+
+</body>
+</html>

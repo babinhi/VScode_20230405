@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+    <style>
+        /*테두리 크기까지 고려해서 요소 크지 지정*/
+        * { 
+            box-sizing: border-box;
+            margin: 0;
+        }
+      
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        #containter1 {
+            border: 5px solid red;
+            /* position: static; */
+        }
+        #containter2 {
+            border: 5px solid green;
+            position: relative;
+            bottom:30px;
+            left: 50px;
+        }
+        #containter3 {
+            border: 5px solid blue;
+            /* position: relative;
+            top: 20px; */
+        }
+    </style>
+</head>
+<body>
+
+    <div id = "containter1">
+        div1    
+    </div>
+    <div id = "containter2">
+        div2    
+    </div>
+    <div id = "containter3">
+        div3
+    </div>
+</body>
+</html>
