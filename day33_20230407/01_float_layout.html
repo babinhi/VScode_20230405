@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height:3000px;
+        }
+        .menu {
+            position: sticky;
+            top: 0;
+        }
+        ul{
+            /*기호 없애기*/
+            list-style-type: none;
+            overflow: hidden;
+            background-color: skyblue;
+        }
+        li{
+            /*li 요소를 한줄로 */
+            float: left;
+        }
+        li a{
+               display: inline-block; 
+               padding: 15px 15px;
+               text-align: center;
+            /*태그에 적용된 밑줄 없애기*/
+            text-decoration: none;
+            color: white;
+        }
+        li a:hover{
+            background-color: rgb(123, 181, 240);
+        }
+        .active{
+            background-color: royalblue;
+        }
+        .container {
+            border: 3px solid #B55A30;
+            background-color: #efe1cf;
+        }
+        h2 {
+            text-align: center;
+        }
+        .header {
+            border: 3px solid #d2386c;
+        }
+        .nav {
+            border: 3px solid #0027b5;
+            float: left;
+            /*브라우저 가로 사이즈에 따라 비율로 사이즈 결정*/
+            width: 30%;
+        }
+        .section {
+            border: 3px solid #00a170;
+            float: left;
+            width: 70%;
+        }
+        /*float 해제*/
+        .main::after {
+            content:"";
+            clear: both;
+            display: table;
+        }
+        .footer {
+            border: 3px solid #fdac53;
+        }
+        @media(max-width: 800px){
+            .nav{
+                width:100%;
+            }
+            .section{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id = "menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#" class ="active">저는요</a>
+            </li>
+             <li>
+                <a href="#">Portfolio</a>
+             </li>
+            <li>
+                 <a href="#">Contact Me</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2>header 영역</h2>
+        </div>
+        <div class="main">
+            <div class="nav">
+                <h2>nav 영역</h2>
+            </div>
+            <div class="section">
+                <h2>section 영역</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>footer 영역</h2>
+        </div>
+    </div>
+</body>
+</html>

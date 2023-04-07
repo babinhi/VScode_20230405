@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* grid 적용을 위해서 배치하려는 요소의 부모 요소에 grid를 지정해야 함*/
+        .container {
+            display: grid;
+            /*한줄에 배치할 요소의 갯수*/
+            grid-template-columns: auto auto auto;
+            /* column-gap: 20px;
+            row-gap: 50px; */
+            gap: 10px;
+        }
+        .itme {
+            background-color: orange;
+            border: 1px solid red;
+            /* width: 200px;
+            height: 200px; */
+        }
+        .itme1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .itme2 {
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .itme5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itme itme1"> div1</div>
+        <div class="itme itme2"> div2</div>
+        <div class="itme itme3"> div3</div>
+        <div class="itme itme4"> div4</div>
+        <div class="itme itme5"> div5</div>
+        <div class="itme itme6"> div6</div>
+        <div class="itme itme7"> div7</div>
+        <div class="itme itme8"> div8</div>
+    </div>
+    
+</body>
+</html>
