@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <h2 class="form-floating mb-5"> login </h2>
+        
+        <form action="/login" method="post">
+            <div class="form-floating mb-3">
+                아이디 <input type="text" id="email" name="member_email" 
+                class="form-control mt-2">
+
+            </div>
+            <div class="form-floating">
+                비밀번호 <input type="password" id="password" name="member_password" 
+                class="form-control mt-2">
+            </div>
+
+            <div class="form-floating">
+                비밀번호 재확인<input type="password" id="password" name="member_password" 
+                class="form-control mt-2">
+            </div>
+            <div class="form-floating">
+                이름 <input type="name" id="name" name="member_name" class="form-control mt-1">
+            </div>
+
+            <div class="form-floating">
+                <form action="/login" method="post">
+                    생년월일 <input type="int" name="birth" name="member_birth" class="form-floating mb-3"
+                    placeholder="월">
+                    <select name="" id="">
+                        <option value="">월</option>
+                        <option value=""> 1월 </option>
+                        <option value=""> 2월 </option>
+                        <option value=""> 3월 </option>
+                        <option value=""> 4월 </option>
+                        <option value=""> 5월 </option>
+                        <option value=""> 6월 </option>
+                        <option value=""> 7월 </option>
+                        <option value=""> 8월 </option>
+                        <option value=""> 9월 </option>
+                        <option value=""> 10월 </option>
+                        <option value=""> 11월 </option>
+                        <option value=""> 12월 </option>
+                    </select>
+                    <input type="int" name="birth" name="member_birth" placeholder="일">
+                </form>
+
+            </div>
+    </div>
+</body>
+
+</html>

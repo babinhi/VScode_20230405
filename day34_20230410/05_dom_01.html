@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- span 인라인태그-->
+    <h2><span>안녕하세요</span></h2>
+    <h2>반갑습니다</h2>
+    <h2>오늘은 월요일</h2>
+    <h3>이제 곧 3시</h3>
+    <h2>두시간 남았네</h2>
+    <h4></h4>
+</body>
+<script>
+    // document값 출력
+    console.log(document);
+    // 현재 문서에 있는 모든 h2요소 출력
+    console.log(document.getElementsByTagName("h2"));
+    const h2All = document.getElementsByTagName("h2");
+    // 유사배열 (배열은 아니지만 배열처럼 사용 가능)
+    console.log(h2All);
+    console.log(h2All[0]);
+    // 첫번째 h2 태그의 innerHTML 속성 
+    console.log(h2All[0].innerHTML);
+    console.log(h2All[0].innerText);
+    // 위 둘의 차이점 : innerHTML : html의 내용 전체
+    // innerText : 택스트만을 가르킴
+
+    // 반복문을 활용하여 h2요소들의 innerText 출력
+    for(let i=0; i<h2All.length; i++)
+        console.log(h2All[i].innerText);{
+    } 
+    // querySelector(css선택자) : 해당요소 중 첫번째 것만 가져옴
+    console.log(document.querySelector("h2"));
+    // 해당요소를 다 가져오고 싶다면
+    console.log(document.querySelectorAll("h2"));
+    const h2All2 = document.querySelectorAll("h2");
+    for(let i=0; i<h2All2.length; i++){
+        console.log(h2All2[i].innerText);
+    } 
+
+    // 내용 없는 h4 태그에 텍스트 추가하기
+    //1) h4태그 요소 가져오기
+    const h4ele = document.getElementsByTagName("h4");
+    //2) h4태그에 innerText 값 지정하기
+    h4ele[0].innerText = "이 내용이 화면에 보입니다.";
+    document.getElementsByTagName("h4")[0].innerText = "ㅋㅋㅋㅋㅋ";
+    
+</script>
+</html>

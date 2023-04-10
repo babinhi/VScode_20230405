@@ -23,19 +23,27 @@
                 <input type="text" id="email" name="member_email" 
                 placeholder="이메일을 입력해주세요" class="form-control">
                 <label for="email">email</label>
-                <!-- http://127.0.0.1:5500/login?member_email=1 -->
+                
             </div>
 
             <div class="form-floating">
                 <input type="password" id="password" name="member_password" 
                 placeholder="비밀번호를 입력해주세요" class="form-control mt-3" >
                 <label for="password">password</label>
-                <!-- http://127.0.0.1:5500/login?member_email=1&member_password=1 -->
+                
             </div>
-
-            <input type="submit" value="login">
+            <input type="submit" value="login" class = "btn btn-primary mt-3">
+            <!-- 버튼 안에 작성한 버튼 태그는 submit의 역할을 함-->
+            <button>버튼</button>
+            <!-- form 태그 안에 submit 역할이 아닌 일반 버튼을 사용하고 싶다면-->
+            <input type="button" value="button type">
         </form>
     </div>
+    <!-- get으로 요청-->
+    <!-- http://127.0.0.1:5500/login?member_email=1 -->
+    <!-- http://127.0.0.1:5500/login?member_email=1&member_password=1 -->
+    <!-- post로 요청-->
+    <!-- http://127.0.0.1:5500/login -->
 </body>
 
 </html>

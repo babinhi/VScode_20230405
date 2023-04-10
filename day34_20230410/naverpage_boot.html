@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        #save_form {
+            width: 600px;
+        }
+        h1 {
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center mt-5">
+        <h1><strong> NAVER </strong></h1> <br>
+    </div>
+    <div id="save_form" class="container">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" class="form-control mb-3">
+
+        <label for="password">비밀번호</label> <br>
+        <input type="password" id="password" name="password" class="form-control mb-3">
+
+        <label for="password_confirm">비밀번호 재확인</label>
+        <input type="password_confirm" id="password_confirm" name="password_confirm mb-3" class="form-control">
+
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" class="form-control mb-3">
+
+        <label for="birth_year">생년월일</label>
+        <div class="row">
+            <div class="col">
+                <input type="text" id="birth_year" name="birth_year" class="form-control mb-3" placeholder="년(4자)">
+            </div>
+            <div class="col">
+                <select name="" id="" class="form-select mb-3">
+                    <option value="">월</option>
+                    <option value=""> 1월 </option>
+                    <option value=""> 2월 </option>
+                    <option value=""> 3월 </option>
+                    <option value=""> 4월 </option>
+                    <option value=""> 5월 </option>
+                    <option value=""> 6월 </option>
+                    <option value=""> 7월 </option>
+                    <option value=""> 8월 </option>
+                    <option value=""> 9월 </option>
+                    <option value=""> 10월 </option>
+                    <option value=""> 11월 </option>
+                    <option value=""> 12월 </option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="text" id="birth_day" name="birth_day" class="form-control" placeholder="일">
+            </div>
+        </div>
+        <label for="gender">성별</label>
+        <select name="" id="" class="form-select mb-3">
+            <option value="male">남</option>
+            <option value="female">여</option>
+            <option value="no">선택안함</option>
+        </select>
+        <label for="moblie">휴대전화</label>
+        <select name="nation_code" id="" class="form-control mb-3">
+            <!-- selected> : 선택 화면이 떴을때 기본값으로 설정-->
+            <option value="82" selected> 대한민국 +82</option>
+            <option value="1"> 미국 +1</option>
+            <option value="33"> 프랑스 +33</option>
+        </select>
+        <div class="row g-2"> <!-- g(가로로 배치할) - 2(요소의 숫자) 합은 12를 넘어가면 안됨-->
+            <div class="col-8">
+                <input type="text" id="moblie" name="moblie" class="form-control mb-3" placeholder="전화번호 입력">
+            </div>
+            <!-- onclick 속성: onclick 속성을 적용한 요소(태그)에 click 이벤트가 발생하면
+                            실행할 javascript함수 또는 문법을 지정함
+            아래 버튼을 클릭하면 hello함수 (javascript에서 정의된) 호출-->
+            <div class="col-4 d-grid">
+                <input type="button" class="btn btn-success btn-blook mb-3" value="인증번호 받기" onclick="hello()">
+            </div>
+        </div>
+        <input type="text" id="moblie_check" name="moblie_check" class="form-control mb-4"
+            placeholder="인증번호를 입력하세요">
+        <div class="row">
+            <div class="col d-grid" >
+                <input type="submit" class="btn btn-outline-success btn-blook" value="가입하기">
+            </div>
+        </div>
+    </div>
+    <script> //(매개변수)
+        // function hello() {  예전방식
+
+        // }
+        /* 화살표 함수(arrow function) 요즘방식 */
+        const hello = () => {
+            console.log("콘솔이 보여진다");
+            alert("alert으로 보여진다");
+
+        }
+    </script>
+</body>
+
+</html>
