@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>dom_01</title>
 </head>
 <body>
     <!-- span 인라인태그-->
@@ -27,12 +27,12 @@
     // 첫번째 h2 태그의 innerHTML 속성 
     console.log(h2All[0].innerHTML);
     console.log(h2All[0].innerText);
-    // 위 둘의 차이점 : innerHTML : html의 내용 전체
+    // 위 둘의 차이점 : innerHTML : html(태그포함)의 내용 전체
     // innerText : 택스트만을 가르킴
 
     // 반복문을 활용하여 h2요소들의 innerText 출력
-    for(let i=0; i<h2All.length; i++)
-        console.log(h2All[i].innerText);{
+    for(let i=0; i<h2All.length; i++){
+        console.log(h2All[i].innerText);
     } 
     // querySelector(css선택자) : 해당요소 중 첫번째 것만 가져옴
     console.log(document.querySelector("h2"));
@@ -48,6 +48,7 @@
     const h4ele = document.getElementsByTagName("h4");
     //2) h4태그에 innerText 값 지정하기
     h4ele[0].innerText = "이 내용이 화면에 보입니다.";
+    // 중간변수를 지정하지 않고 바로 지정하기
     document.getElementsByTagName("h4")[0].innerText = "ㅋㅋㅋㅋㅋ";
     
 </script>
