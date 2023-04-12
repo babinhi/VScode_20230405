@@ -10,40 +10,69 @@
 <style>
 
 </style>
+
 <body>
     <h1>계산기</h1>
-    <form name="num1">
-        jave 성적 : <input type="text" id="id1" name="id1" ><br>
+
+    <!-- jave 성적 : <input type="text" id="id1" name="id1" ><br>
         html 성적 : <input type="text" id="id2" name="id2" ><br>
         학점 : <input type="text" id="id3" name="id3"><br>
         <h1 id="result1"></h1>
-        <input type="button" value="입력값확인" onclick="fun1()"> <br>
-        
-        
-    </form>
+        <input type="button" value="입력값확인" onclick="fun1()"> <br> -->
+
+    jave 성적 : <input type="text" id="java"><br>
+    html 성적 : <input type="text" id="html"><br>
+    학점 : <input type="text" id="grade"><br>
+    <h1 id="grade1"></h1>
+    <button onclick="grade()"> 학점계산기</button>
+
+
 </body>
 <script>
 
-    const fun1 = () => {
-        const input1 = document.getElementById("id1");
-        const input2 = document.getElementById("id2");
-        const input3 = document.getElementById("id3");
-        input3.value= (parseInt(input1.value)+parseInt(input2.value))/2;
+    // const fun1 = () => {
+    //     const input1 = document.getElementById("id1");
+    //     const input2 = document.getElementById("id2");
+    //     const input3 = document.getElementById("id3");
+    //     input3.value = (parseInt(input1.value) + parseInt(input2.value)) / 2;
 
 
-        if(input3.value>=90){
-            input3.value = "A";
-        }else if(input3.value>=80){
-            input3.value = "B";
-        }else if(input3.value>=70){
-            input3.value = "C";
-        }else if(input3.value>=60){
-            input3.value = "D";
-        }else {
-            input3.value = "F";
+    //     if (input3.value >= 90) {
+    //         input3.value = "A";
+    //     } else if (input3.value >= 80) {
+    //         input3.value = "B";
+    //     } else if (input3.value >= 70) {
+    //         input3.value = "C";
+    //     } else if (input3.value >= 60) {
+    //         input3.value = "D";
+    //     } else {
+    //         input3.value = "F";
+    //     }
+    //     const result = document.getElementById("result1");
+    //     result.innerText = "당신의 학점은" + input3.value + "입니다";
+    // }
+    const grade = () => {
+        const java = document.getElementById("java").value;
+        console.log(java.length);
+        const html = document.getElementById("html").value;
+        const avg  = (parseInt(java) + parseInt(html)) / 2;
+        let grade="";
+
+
+        if (avg >= 90) {
+            grade = "A";
+        } else if (avg >= 80) {
+            grade = "B";
+        } else if (avg >= 70) {
+            grade = "C";
+        } else if (avg >= 60) {
+            grade = "D";
+        } else {
+            grade = "F";
         }
-        const result =document.getElementById("result1");
-        result.innerText= "당신의 학점은"+ input3.value+"입니다";
+        const result = document.getElementById("grade");
+        result.value = grade;
+        document.getElementById("grade1").innerHTML = "당신의 학점은" + grade + "입니다";
     }
 </script>
 
