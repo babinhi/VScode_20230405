@@ -12,120 +12,130 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <style>
-        body {
-            height: 1500px;
+        
+        .box {
+            background-color: blanchedalmond;
+            background-size: 1500px 1000px;
+
         }
 
         #save_form {
-            width: 600px;
+            width: 700px;
+            height: 1000px;
         }
     </style>
 </head>
 
 <body>
-    <h1 class="container text-center mt-5"><strong> 회원가입 페이지 </strong></h1>
-    <div id="save_form" class="container">
-        <h6>아이디</h6>
-        <input type="text" id="member-uesrname" name="memberUesrname" class="form-control" onblur="uesr()">
-        <p id="uesrname-check"></p>
+    <div class="box">
+        <h1 class="container text-center mt-5 mb-5"><strong> 회원가입 페이지 </strong></h1>
+
+        <div id="save_form" class="container">
+            <h6>아이디</h6>
+            <input type="text" id="member-uesrname" name="memberUesrname" class="form-control" onblur="uesr()">
+            <p id="uesrname-check"></p>
 
 
 
-        <h6>비밀번호 입력</h6>
-        <input type="text" id="member-password" name="memberPassword" class="form-control" onblur="password()">
-        <p id="password-check"></p>
+            <h6>비밀번호 입력</h6>
+            <input type="text" id="member-password" name="memberPassword" class="form-control" onblur="password()">
+            <p id="password-check"></p>
 
-        <h6>비밀번호 확인</h6>
-        <input type="text" id="password-confirm" name="passwordConfirm" class="form-control" onblur="confirm()">
-        <p id="confirm-check"></p>
+            <h6>비밀번호 확인</h6>
+            <input type="text" id="password-confirm" name="passwordConfirm" class="form-control" onblur="confirm()">
+            <p id="confirm-check"></p>
 
-        <h6>이름</h6>
-        <input type="text" id="member-name" name="memberName" class="form-control" onblur="membername()">
-        <p id="name-check"></p>
+            <h6>이름</h6>
+            <input type="text" id="member-name" name="memberName" class="form-control" onblur="membername()">
+            <p id="name-check"></p>
 
-
-        <!-- <input type="text" id="member-mobile" name="member-Mbile" 
-        class="form-control" onblur="moblie()">
-        <h6 id = "mobile-check"></h6> -->
-        <label for="member-mobile">전화번호</label>
-        <div class="row">
-            <div class="col">
-                <select name="" id="" class="form-select mb-3">
-                    <option value="">통신사</option>
-                    <option value=""> SKT </option>
-                    <option value=""> KT </option>
-                    <option value=""> LG U+ </option>
-                    <option value=""> 알뜰폰 </option>
-                    <option value=""> MVNO </option>
-                </select>
+            <label for="member-mobile">전화번호</label>
+            <div class="row">
+                <div class="col">
+                    <select name="" id="" class="form-select mb-3">
+                        <option value="">통신사</option>
+                        <option value=""> SKT </option>
+                        <option value=""> KT </option>
+                        <option value=""> LG U+ </option>
+                        <option value=""> 알뜰폰 </option>
+                        <option value=""> MVNO </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select name="nation_code" id="" class="form-select mb-3s">
+                        <!-- selected> : 선택 화면이 떴을때 기본값으로 설정-->
+                        <option value="82" selected> 대한민국 +82</option>
+                        <option value="1"> 미국 +1</option>
+                        <option value="33"> 프랑스 +33</option>
+                    </select>
+                </div>
             </div>
-            <div class="col">
-                <select name="nation_code" id="" class="form-select mb-3s">
-                    <!-- selected> : 선택 화면이 떴을때 기본값으로 설정-->
-                    <option value="82" selected> 대한민국 +82</option>
-                    <option value="1"> 미국 +1</option>
-                    <option value="33"> 프랑스 +33</option>
-                </select>
+            <div class="row g-2">
+                <div class=" col-8">
+                    <input type=" text" id="member-mobile" name="member-mobile" onblur="moblie()" class="form-control"
+                        placeholder="번호입력">
+                    <p id="mobile-check"></p>
+                </div>
+                <div class="col-4 d-grid">
+                    <input type="button" class="btn btn-primary btn-blook mb-3" value="인증번호 받기" onclick="hello()">
+                </div>
             </div>
+
+            <input type="text" id="moblie_check" name="moblie_check" class="form-control mb-3"
+                placeholder="인증번호를 입력하세요">
+
+            <label for="member-uesrname">이메일입력</label>
+            <div class="row g-3">
+                <div class="col-4">
+                    <input type="text" id="email-check" name="memberCheck" class="form-control" onblur="id()">
+                </div>
+                <div class="col-1 text-center">
+                    <span>@</span>
+                </div>
+                <div class="col-4 d-grid">
+                    <input type="text" id="member-email" name="mwmberEmail" class="form-control" onblur="email()"
+                        placeholder="메일을 입력하세요">
+                </div>
+                <div class="col-3 d-grid">
+                    <select id="email-domain-select" class="form-control" onchange="domain_select()">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="gmail.com">지메일</option>
+                        <option value="hanmail.net">한메일</option>
+                    </select>
+                </div>
+            </div>
+
+            <h6 class="mt-3">성별</h6>
+            남 <input type="radio" name="gender" value="male">
+            여 <input type="radio" name="gender" value="female">
+
+            <h6 class="mt-3">주소</h6>
+            <div class="row g-2">
+                <div class=" col-7">
+                    <input type="text" id="sample6_postcode" class="form-control" placeholder="우편번호">
+                </div>
+                <div class=" col-5">
+                    <input type="button" onclick="sample6_execDaumPostcode()" class="btn btn-primary btn-blook mb-3"
+                        value="우편번호 찾기">
+                </div>
+            </div>
+            <input type="text" id="sample6_address" class="form-control mb-2" placeholder="주소">
+            <div class="row g-2">
+                <div class=" col-8">
+                    <input type="text" id="sample6_detailAddress" class="form-control mb-2" placeholder="상세주소">
+                </div>
+                <div class=" col-4">
+                    <input type="text" id="sample6_extraAddress" class="form-control mb-2" placeholder="참고항목">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-grid">
+                    <input type="submit" class="btn btn-outline-primary btn-blook" value="가입하기">
+                </div>
+            </div>
+
         </div>
-        <div class="row g-2">
-            <div class=" col-8">
-                <input type=" text" id="member-mobile" name="member-mobile" onblur="moblie()" class="form-control"
-                    placeholder="번호입력">
-                <p id="mobile-check"></p>
-            </div>
-            <div class="col-4 d-grid">
-                <input type="button" class="btn btn-primary btn-blook mb-3" value="인증번호 받기" onclick="hello()">
-            </div>
-        </div>
-
-        <input type="text" id="moblie_check" name="moblie_check" class="form-control mb-3" placeholder="인증번호를 입력하세요">
-
-        <label for="member-uesrname">이메일입력</label>
-        <div class="row g-3">
-            <div class="col-4">
-                <input type="text" id="email-check" name="memberCheck" class="form-control" onblur="id()">
-            </div>
-            <div class="col-1 text-center">
-                <span>@</span>
-            </div>
-            <div class="col-4 d-grid">
-                <input type="text" id="member-email" name="mwmberEmail" class="form-control" onblur="email()"
-                    placeholder="메일을 입력하세요">
-            </div>
-            <div class="col-3 d-grid">
-                <select id="email-domain-select" class="form-control" onchange="domain_select()">
-                    <option value="">직접입력</option>
-                    <option value="naver.com">네이버</option>
-                    <option value="gmail.com">지메일</option>
-                    <option value="hanmail.net">한메일</option>
-                </select>
-            </div>
-        </div> 
-
-        <h6 class="mt-3">성별</h6>
-        남 <input type="radio" name="gender" value="male">
-        여 <input type="radio" name="gender" value="female">
-
-        <h6 class="mt-3">주소</h6>
-        <div class="row g-2">
-            <div class=" col-7">
-                <input type="text" id="sample6_postcode" class="form-control" placeholder="우편번호">
-            </div>
-            <div class=" col-5">
-                <input type="button" onclick="sample6_execDaumPostcode()" class="btn btn-primary btn-blook mb-3"
-                    value="우편번호 찾기">
-            </div>
-        </div>
-        <input type="text" id="sample6_address" class="form-control mb-2" placeholder="주소">
-        <input type="text" id="sample6_detailAddress" class="form-control mb-2" placeholder="상세주소">
-        <input type="text" id="sample6_extraAddress" class="form-control mb-2" placeholder="참고항목">
-        <div class="row">
-            <div class="col d-grid">
-                <input type="submit" class="btn btn-outline-primary btn-blook" value="가입하기">
-            </div>
-        </div>
-
     </div>
 </body>
 <script>
